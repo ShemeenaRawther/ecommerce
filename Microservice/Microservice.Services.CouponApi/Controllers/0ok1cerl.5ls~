@@ -1,0 +1,52 @@
+﻿using Microservice.Services.CouponApi.Data;
+using Microservice.Services.CouponApi.Models;
+using Microservice.Services.CouponApi.Models.Dto;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+
+namespace Microservice.Services.CouponApi.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class CouponApiController : ControllerBase
+    {
+        private readonly AppDbContext _db;
+        private ResponseDto _responseDto;
+        public CouponApiController(AppDbContext db)
+        {
+            _db = db;
+            _responseDto = new ResponseDto();
+        }
+
+        [HttpGet]
+        public object Get()
+        {
+            try
+            {
+                IEnumerable<Coupon> coupons = _db.Coupons.ToList();
+                _responseDto.Result = coupons;
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new { Message = ex.Message });
+            }
+            return _responseDto;
+        }
+
+        [HttpGet]
+        [Route("{id:int}")]
+        public object Get(int id)
+        {
+            try
+            {
+                Coupon coupon = _db.Coupons.First(coupon=>coupon.Id==id);
+                return _responseDto.Result = coupon;
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new { Message = ex.Message });
+            }
+            return _responseDto
+        }
+    }
+}
