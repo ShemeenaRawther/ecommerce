@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend", "Frontend", "{0C137481-2AA0-4FC6-9D99-4EEE39463A36}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice.Services.CouponApi", "Microservice.Services.CouponApi\Microservice.Services.CouponApi.csproj", "{EA6DA199-B1FF-4CF3-B786-1843B06666B7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.Web", "Microservices.Web\Microservices.Web.csproj", "{EFF86268-08C5-441A-9E53-B6382A42356E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice.Services.AuthAPI", "Microservice.Services.AuthAPI\Microservice.Services.AuthAPI.csproj", "{534ECEC8-8454-43A0-A6C7-273BA2B372EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{EFF86268-08C5-441A-9E53-B6382A42356E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFF86268-08C5-441A-9E53-B6382A42356E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFF86268-08C5-441A-9E53-B6382A42356E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{534ECEC8-8454-43A0-A6C7-273BA2B372EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{534ECEC8-8454-43A0-A6C7-273BA2B372EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{534ECEC8-8454-43A0-A6C7-273BA2B372EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{534ECEC8-8454-43A0-A6C7-273BA2B372EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,5 +42,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{EA6DA199-B1FF-4CF3-B786-1843B06666B7} = {734F429F-5969-4D29-8EBD-7C3BBC134027}
 		{EFF86268-08C5-441A-9E53-B6382A42356E} = {0C137481-2AA0-4FC6-9D99-4EEE39463A36}
+		{534ECEC8-8454-43A0-A6C7-273BA2B372EE} = {734F429F-5969-4D29-8EBD-7C3BBC134027}
 	EndGlobalSection
 EndGlobal
